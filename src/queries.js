@@ -1,12 +1,14 @@
+import "dotenv/config";
 import PG from 'pg'
 const Pool = PG.Pool;
 
+
 // const Pool = require('pg').Pool
 const pool = new Pool({
-  user: 'leah',
-  host: 'localhost',
-  database: 'api',
-  password: 'starplayer421',
+  user: process.env.DB_NAME,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASS,
   port: 3000,
 })
 
