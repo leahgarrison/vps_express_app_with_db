@@ -9,7 +9,7 @@ const pool = new Pool({
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
   password: process.env.DB_PASS,
-  port: 3000,
+  port: 3001,
 })
 
 export const getUsers = (request, response) => {
