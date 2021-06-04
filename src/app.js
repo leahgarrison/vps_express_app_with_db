@@ -5,6 +5,7 @@ import { getUsers } from './queries.js';
 
 const app = express();
 const port = 3001;
+// psql --username=leah --port=5432 --host=localhost --dbname=postgres 
 
 
 // app.use(express.static('public'));
@@ -22,8 +23,7 @@ app.get('/', (request, response) => {
 
 app.get('/users', getUsers)
 
-
 app.listen(port, () =>
-  console.log('App running on port ${port}')
+  console.log(`App running on port ${port}`)
 );
 
